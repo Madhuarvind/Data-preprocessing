@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Preprocessing Application</title>
+
+    <!-- Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+
+    <!-- Hero Section with Logo -->
+    <div class="container mt-4">
+        <div class="hero shadow-lg text-center">
+            <!-- Add the logo image here -->
+            <img src="{{ url_for('static', filename='logo.jpg') }}" alt="App Logo" class="mb-4" style="width: 150px;">
+            <h1>Data Preprocessing Application</h1>
+            <p>Upload your dataset and select charts for visualization.</p>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <h2>Choose your Dataset (CSV)</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data" class="mt-4">
+                <div class="mb-3">
+                    <input type="file" class="form-control" id="file" name="file" accept=".csv" required>
+                </div>
+
+                <h2>Select Charts to Visualize</h2>
+                <div class="chart-options">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="charts" value="histogram" id="histogram">
+                        <label class="form-check-label" for="histogram">Histogram</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="charts" value="boxplot" id="boxplot">
+                        <label class="form-check-label" for="boxplot">Box Plot</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="charts" value="scatter" id="scatter">
+                        <label class="form-check-label" for="scatter">Scatter Plot</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="charts" value="line" id="line">
+                        <label class="form-check-label" for="line">Line Chart</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="charts" value="bar" id="bar">
+                        <label class="form-check-label" for="bar">Bar Chart</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="charts" value="pie" id="pie">
+                        <label class="form-check-label" for="pie">Pie Chart</label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="upload-button mt-4">Upload and Generate Charts</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Data Cleaner. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

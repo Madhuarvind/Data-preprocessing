@@ -1,0 +1,71 @@
+/* General Body Styling */
+body {
+    background-image: url("{{ url_for('static', filename='background.jpg') }}"); /* Add your background image */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #2c8ee9; /* Text color */
+}
+
+/* Hero Section */
+.hero {
+    background-color: rgba(44, 160, 243, 0.8); /* Use a semi-transparent background color */
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+/* Upload Section */
+.upload-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.upload-button,
+.download-button {
+    background-color: #4a90e2;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.upload-button:hover,
+.download-button:hover {
+    background-color: #357ab8;
+}
+
+/* Download Section */
+.download-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Visualization Section */
+.visualization-section {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.visualization {
+    text-align: center;
+}
+
+.visualization img {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 30px;
+    padding: 15px 0;
+    background-color: rgba(240, 244, 248, 0.8); /* Use a semi-transparent footer */
+    text-align: center;
+}
